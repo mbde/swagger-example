@@ -27,7 +27,4 @@ public class StaticStringResource {
     public String getStatic(@PathParam("string") String string){
         return string;
     }
-
-
-
 }
