@@ -1,10 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
-	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+	http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
 	http://www.springframework.org/schema/context
-	http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+	http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
  	<context:component-scan base-package="com.github.mbde.swaggerexample" />
+
+	<bean id="apiListingResourceJSON" class="com.wordnik.swagger.jersey.listing.ApiListingResourceJSON"/>
+	<bean id="apiDeclarationProvider" class="com.wordnik.swagger.jersey.listing.JerseyApiDeclarationProvider" scope="singleton"/>
+	<bean id="resourceListingProvider" class="com.wordnik.swagger.jersey.listing.JerseyResourceListingProvider" scope="singleton"/>
+	<bean id="beanConfig" class="com.wordnik.swagger.jaxrs.config.BeanConfig">
+		<property name="title" value="jersey/spring/jetty-example"/>
+		<property name="version" value="0.1" />
+		<property name="basePath" value="http://localhost:8080/rest"/>
+		<property name="resourcePackage" value="com.github.mbde.swaggerexample"/>
+		<property name="scan" value="true"/>
+	</bean>
 
 </beans>
