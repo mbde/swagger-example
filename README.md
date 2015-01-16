@@ -12,6 +12,6 @@ Run example
 -----------
  * mvn jetty:run
  * [swagger-ui@localhost](http://localhost:8080/webjars/swagger-ui/2.0.24/index.html)
- * [swagger api-docsi@localhost](http://localhost:8080/api-docs)
+ * [swagger api-docsi@localhost](http://localhost:8080/rest/api-docs)
 
 used example from : http://www.mkyong.com/webservices/jax-rs/jersey-spring-integration-example/
