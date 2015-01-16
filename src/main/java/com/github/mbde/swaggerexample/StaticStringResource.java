@@ -10,7 +10,7 @@ import com.wordnik.swagger.annotations.ApiOperation;
 /**
  * Created by markus.decke on 12.01.15.
  */
-@Api(value ="/string/static")
+@Api(value ="/string/staticly")
 public class StaticStringResource {
 
     @ApiOperation( value ="hello world")
